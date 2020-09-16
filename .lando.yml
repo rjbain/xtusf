@@ -1,0 +1,6 @@
+name: xtusf
+recipe: pantheon
+config:
+  framework: drupal8
+  site: xtusf
+  id: dfc62776-0395-47d4-8c01-2153a9d91b8c
