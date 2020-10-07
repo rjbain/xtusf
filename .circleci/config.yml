@@ -170,7 +170,7 @@ jobs:
 
       - run:
           name: run acceptance tests with Behat
-          command: ./.ci/test/behat/run
+          # command: ./.ci/test/behat/run
 
       - run:
           # Uncomment line 13 in .ci/test/behat/cleanup to restore a backup

@@ -1459,7 +1459,7 @@ display:
     position: 6
     display_options:
       display_extenders: {  }
-      block_description: 'Slick X: Grid'
+      block_description: 'Slickster Grid: Block'
       display_description: ''
       title: 'Slickster: Grid'
       defaults:
