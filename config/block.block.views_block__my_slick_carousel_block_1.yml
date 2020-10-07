@@ -1,20 +1,23 @@
-uuid: 7317e345-565c-466b-b46b-ea6a1005296d
+uuid: 823526d0-6212-4852-b39e-d387379c451a
 langcode: en
 status: true
 dependencies:
+  config:
+    - views.view.my_slick_carousel
   module:
     - node
     - system
+    - views
   theme:
     - bartik
-id: views_block__slick_x_block_grid
+id: views_block__my_slick_carousel_block_1
 theme: bartik
 region: content
 weight: 0
 provider: null
-plugin: 'views_block:slick_x-block_grid'
+plugin: 'views_block:my_slick_carousel-block_1'
 settings:
-  id: 'views_block:slick_x-block_grid'
+  id: 'views_block:my_slick_carousel-block_1'
   label: ''
   provider: views
   label_display: visible

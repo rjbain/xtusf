@@ -11,7 +11,7 @@
 /vendor/
 /web/core/
 /web/modules/contrib/
-# /web/libraries/
+/web/libraries/
 /web/modules/README.txt
 /web/themes/contrib/
 /web/themes/README.txt
