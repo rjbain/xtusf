@@ -4,6 +4,16 @@ config:
   framework: drupal8
   site: xtusf
   id: dfc62776-0395-47d4-8c01-2153a9d91b8c
+  drush: composer
 tooling:
   drupal:
     cmd: "/app/vendor/bin/drupal --root=/app/web"
+  drush:
+    cmd:
+      - /app/vendor/bin/drush
+services:
+  node:
+    type: node
+    build:
+      - npm install
+      - yarn
