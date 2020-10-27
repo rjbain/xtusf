@@ -21,15 +21,13 @@ use Drupal\migrate\Row;
  *   source: text
  * @endcode
  */
-class CheckValue extends ProcessPluginBase
-{
+class CheckValue extends ProcessPluginBase {
 
-    /**
-     * {@inheritdoc}
-     */
-    public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property)
-    {
-        var_dump($value);
-    }
+  /**
+   * {@inheritdoc}
+   */
+  public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property) {
+    var_dump($value);
+  }
 
 }
