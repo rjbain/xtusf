@@ -47,7 +47,7 @@ function migration_boilerplate_migrate_prepare_row(Row $row, MigrateSourceInterf
     // Put stuff here.
   ];
 
-  // Vocab Skip
+  // Vocab Skip.
   $vocab_skip = [
     // Put stuff here.
   ];
