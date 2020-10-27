@@ -31,4 +31,5 @@ class CheckValue extends ProcessPluginBase
     {
         var_dump($value);
     }
+
 }
