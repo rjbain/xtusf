@@ -5,15 +5,27 @@ config:
   site: xtusf
   id: dfc62776-0395-47d4-8c01-2153a9d91b8c
   drush: composer
+  php: 7.2
+  database: mariadb
 tooling:
   drupal:
     cmd: "/app/vendor/bin/drupal --root=/app/web"
   drush:
-    cmd:
-      - /app/vendor/bin/drush
+    cmd: "php -d memory_limit=-1 /app/vendor/bin/drush"
 services:
+  appserver:
+    type: php
+    config:
+      php: conf/php.ini
   node:
     type: node
     build:
       - npm install
       - yarn
+  d7db:
+    type: mariadb
+    creds:
+      user: drupal7db
+      password: drupal7db
+      database: drupal7db
+    portforward: true

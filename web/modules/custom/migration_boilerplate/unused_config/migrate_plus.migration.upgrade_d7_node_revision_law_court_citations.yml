@@ -1,0 +1,262 @@
+uuid: 2e176fa6-1082-414e-b1ec-ac501f7a3681
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_revision_law_court_citations
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: alterFieldFormatterMigration
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node revisions (Law Court Citations)'
+source:
+  plugin: d7_node_revision
+  node_type: law_court_citations
+process:
+  nid:
+    -
+      plugin: get
+      source: nid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: changed
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  comment_node_law_court_citations/0/status:
+    -
+      plugin: get
+      source: comment
+  body:
+    -
+      plugin: get
+      source: body
+  field_date:
+    -
+      plugin: sub_process
+      source: field_date
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: 'Y-m-d\TH:i:s'
+          source: value
+  field_display_title:
+    -
+      plugin: get
+      source: field_display_title
+  field_image:
+    -
+      plugin: sub_process
+      source: field_image
+      process:
+        target_id: fid
+        alt: alt
+        title: title
+        width: width
+        height: height
+  field_law_abbv_court_name:
+    -
+      plugin: get
+      source: field_law_abbv_court_name
+  field_law_book_case_num:
+    -
+      plugin: get
+      source: field_law_book_case_num
+  field_law_book_display:
+    -
+      plugin: get
+      source: field_law_book_display
+  field_law_book_info:
+    -
+      plugin: get
+      source: field_law_book_info
+  field_law_book_pub_year:
+    -
+      plugin: get
+      source: field_law_book_pub_year
+  field_law_case_name:
+    -
+      plugin: get
+      source: field_law_case_name
+  field_law_court_name_long:
+    -
+      plugin: get
+      source: field_law_court_name_long
+  field_law_court_name_short:
+    -
+      plugin: get
+      source: field_law_court_name_short
+  field_law_faculty_name:
+    -
+      plugin: get
+      source: field_law_faculty_name
+  field_link:
+    -
+      plugin: field_link
+      source: field_link
+destination:
+  plugin: 'entity_revision:node'
+  default_bundle: law_court_citations
+migration_dependencies:
+  required:
+    - upgrade_d7_node_about_content_image_only_banner
+    - upgrade_d7_node_above_content_banner_narrow
+    - upgrade_d7_node_above_content_featured_annouceme
+    - upgrade_d7_node_above_content_title_blurb_links
+    - upgrade_d7_node_academic_program
+    - upgrade_d7_node_admissions_featured_links
+    - upgrade_d7_node_admissions_form_landing_page
+    - upgrade_d7_node_advantage_image_box
+    - upgrade_d7_node_article
+    - upgrade_d7_node_below_content_image_content_pane
+    - upgrade_d7_node_briefs
+    - upgrade_d7_node_campaign_donor_carousel
+    - upgrade_d7_node_campaign_thermometer
+    - upgrade_d7_node_checker_board
+    - upgrade_d7_node_content_image_callout_panel_pane
+    - upgrade_d7_node_course
+    - upgrade_d7_node_crase_blog
+    - upgrade_d7_node_events
+    - upgrade_d7_node_explore_usf_feature
+    - upgrade_d7_node_external_news_athletics
+    - upgrade_d7_node_external_news_hashtag
+    - upgrade_d7_node_external_news_usf_in_the_news
+    - upgrade_d7_node_facts_statistics
+    - upgrade_d7_node_faculty_details
+    - upgrade_d7_node_faq_page
+    - upgrade_d7_node_featured_events
+    - upgrade_d7_node_full_width_admissions_feature
+    - upgrade_d7_node_full_width_button_intro
+    - upgrade_d7_node_full_width_media_carousel_panel
+    - upgrade_d7_node_full_width_recent_news_content_v
+    - upgrade_d7_node_full_width_story_feature
+    - upgrade_d7_node_giving_feature_area
+    - upgrade_d7_node_gleeson_gleanings
+    - upgrade_d7_node_headline_promotional_split_featu
+    - upgrade_d7_node_homepage_academics_search_block
+    - upgrade_d7_node_homepage_feature
+    - upgrade_d7_node_homepage_headline_post
+    - upgrade_d7_node_homepage_san_francisco_block
+    - upgrade_d7_node_instagram
+    - upgrade_d7_node_in_content_arbitrary_content
+    - upgrade_d7_node_in_content_catalog_links
+    - upgrade_d7_node_in_content_events_with_static_he
+    - upgrade_d7_node_in_content_faculty_list
+    - upgrade_d7_node_in_content_featured_links
+    - upgrade_d7_node_in_content_flexible_callout
+    - upgrade_d7_node_in_content_program_availability_
+    - upgrade_d7_node_in_content_related_links
+    - upgrade_d7_node_in_content_testimony
+    - upgrade_d7_node_in_content_text_only_callout
+    - upgrade_d7_node_in_the_news_card_panel
+    - upgrade_d7_node_journal_archive_page
+    - upgrade_d7_node_journal_banner
+    - upgrade_d7_node_journal_landing_page
+    - upgrade_d7_node_journal_story
+    - upgrade_d7_node_law_article
+    - upgrade_d7_node_law_books
+    - upgrade_d7_node_law_book_contributions
+    - upgrade_d7_node_law_brief
+    - upgrade_d7_node_law_court_citations
+    - upgrade_d7_node_law_media
+    - upgrade_d7_node_law_op_ed_blog
+    - upgrade_d7_node_law_other_publications
+    - upgrade_d7_node_law_presentations
+    - upgrade_d7_node_law_service
+    - upgrade_d7_node_logo_grid_item
+    - upgrade_d7_node_magazine
+    - upgrade_d7_node_magazine_archive
+    - upgrade_d7_node_magazine_archive_list
+    - upgrade_d7_node_magazine_banner
+    - upgrade_d7_node_magazine_banner_no_carousel
+    - upgrade_d7_node_magazine_carousel
+    - upgrade_d7_node_magazine_featured_story_callout
+    - upgrade_d7_node_magazine_masthead
+    - upgrade_d7_node_magazine_newsroom_feature
+    - upgrade_d7_node_magazine_news_link_list
+    - upgrade_d7_node_magazine_related_news_sidebar
+    - upgrade_d7_node_magazine_story_block
+    - upgrade_d7_node_magazine_story_blockquote
+    - upgrade_d7_node_magazine_story_block_list
+    - upgrade_d7_node_news
+    - upgrade_d7_node_our_colleges_schools_interface
+    - upgrade_d7_node_page
+    - upgrade_d7_node_panel
+    - upgrade_d7_node_photo_gallery
+    - upgrade_d7_node_program_director
+    - upgrade_d7_node_program_options_sidebar
+    - upgrade_d7_node_publications_and_media
+    - upgrade_d7_node_school_college_headline_feature
+    - upgrade_d7_node_sidebar_blog_call_out_link_panel
+    - upgrade_d7_node_sidebar_contact_callout
+    - upgrade_d7_node_sidebar_story_blockquote
+    - upgrade_d7_node_sidebar_text_call_out_box_panel
+    - upgrade_d7_node_simple_image_callout
+    - upgrade_d7_node_simple_sidebar_link
+    - upgrade_d7_node_social_footer_bar
+    - upgrade_d7_node_social_footer_bar_general
+    - upgrade_d7_node_social_media_blog_sidebar_links
+    - upgrade_d7_node_story_blockquote
+    - upgrade_d7_node_student_profile
+    - upgrade_d7_node_support_us_sidebar_callout
+    - upgrade_d7_node_take_over_navigation_container
+    - upgrade_d7_node_three_callout_banner
+    - upgrade_d7_node_title_link_sidebar_call_out
+    - upgrade_d7_node_tumblr
+    - upgrade_d7_node_tweet
+    - upgrade_d7_node_user_alert
+    - upgrade_d7_node_usf_admission_counselor
+    - upgrade_d7_node_usf_admission_counselor_search
+    - upgrade_d7_node_usf_admission_events_search
+    - upgrade_d7_node_usf_admission_recruiting_events
+    - upgrade_d7_node_usf_blog
+    - upgrade_d7_node_vimeo
+    - upgrade_d7_node_webform
+    - upgrade_d7_node_youtube
+  optional: {  }

@@ -1,0 +1,92 @@
+uuid: fbb1a6e8-2732-4eb9-b9f3-7c6a35e1b176
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_sidebar_blog_call_out_link_panel
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: alterFieldInstanceMigration
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Nodes (Sidebar Blog Call Out Link Panel Pane)'
+source:
+  plugin: d7_node
+  node_type: sidebar_blog_call_out_link_panel
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: changed
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  comment_node_sidebar_blog_call_out_link_panel/0/status:
+    -
+      plugin: get
+      source: comment
+  field_content_reference_uri:
+    -
+      plugin: field_link
+      source: field_content_reference_uri
+  field_display_title:
+    -
+      plugin: get
+      source: field_display_title
+destination:
+  plugin: 'entity:node'
+  default_bundle: sidebar_blog_call_out_link_panel
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+  optional:
+    - upgrade_d7_field_instance
+    - upgrade_d7_comment_field_instance
