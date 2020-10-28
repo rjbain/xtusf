@@ -1,0 +1,120 @@
+uuid: b6455fdb-b163-4529-bef1-01035bd32683
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_course
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: alterFieldInstanceMigration
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Nodes (Course)'
+source:
+  plugin: d7_node
+  node_type: course
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: changed
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  comment_node_course/0/status:
+    -
+      plugin: get
+      source: comment
+  body:
+    -
+      plugin: get
+      source: body
+  field_course_credits:
+    -
+      plugin: get
+      source: field_course_credits
+  field_course_number:
+    -
+      plugin: get
+      source: field_course_number
+  field_display_title:
+    -
+      plugin: get
+      source: field_display_title
+  field_program_code:
+    -
+      plugin: get
+      source: field_program_code
+  field_school_code:
+    -
+      plugin: get
+      source: field_school_code
+  field_teachers:
+    -
+      plugin: get
+      source: field_teachers
+  field_field_course_prerequsite:
+    -
+      plugin: get
+      source: field_field_course_prerequsite
+  field_course_restrictions:
+    -
+      plugin: get
+      source: field_course_restrictions
+destination:
+  plugin: 'entity:node'
+  default_bundle: course
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+  optional:
+    - upgrade_d7_field_instance
+    - upgrade_d7_comment_field_instance

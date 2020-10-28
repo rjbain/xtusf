@@ -1,0 +1,102 @@
+uuid: 68466f14-188d-4081-bb5e-82474e4d8282
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_above_content_banner_narrow
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: alterFieldInstanceMigration
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Nodes (Above Content Banner Title/Caption Narrow)'
+source:
+  plugin: d7_node
+  node_type: above_content_banner_narrow
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: changed
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  comment_node_above_content_banner_narrow/0/status:
+    -
+      plugin: get
+      source: comment
+  field_display_title:
+    -
+      plugin: get
+      source: field_display_title
+  field_image:
+    -
+      plugin: sub_process
+      source: field_image
+      process:
+        target_id: fid
+        alt: alt
+        title: title
+        width: width
+        height: height
+  field_plain_text_body_content:
+    -
+      plugin: get
+      source: field_plain_text_body_content
+destination:
+  plugin: 'entity:node'
+  default_bundle: above_content_banner_narrow
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+  optional:
+    - upgrade_d7_field_instance
+    - upgrade_d7_comment_field_instance

@@ -7,19 +7,62 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "dinbror/blazy",
+                "version": "1.8.2",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "blazy"
+                },
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/dinbror/blazy",
+                    "reference": "1.8.2"
+                }
+            }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "kenwheeler/slick",
+            "version": "1.8.0",
+            "type": "drupal-library",
+            "extra": {
+              "installer-name": "slick"
+            },
+            "source": {
+              "type": "git",
+              "url": "https://github.com/kenwheeler/slick",
+              "reference": "1.8.0"
+            }
+          }
         }
     ],
     "require": {
         "php": ">=7.0.8",
         "composer/installers": "^1.0.20",
         "cweagans/composer-patches": "^1.0",
+        "dinbror/blazy": "1.8.2",
+        "drupal/blazy": "^2.1",
         "drupal/config_direct_save": "^1.0",
         "drupal/config_installer": "^1.0",
         "drupal/console": "^1.9",
         "drupal/core-composer-scaffold": "^8.8.1",
         "drupal/core-recommended": "^8.8",
+        "drupal/libraries": "^3.0@alpha",
+        "drupal/migrate_plus": "^4.2",
+        "drupal/migrate_tools": "^4.5",
+        "drupal/migrate_upgrade": "~3.0.0",
+        "drupal/slick": "^2.2",
+        "drupal/slick_extras": "1.0-rc3",
+        "drupal/slick_views": "^2.3",
         "drush-ops/behat-drush-endpoint": "^9.3",
-        "drush/drush": "~8.3",
+        "drush/drush": "9.7.1",
+        "kenwheeler/slick": "^1.8",
+        "oomphinc/composer-installers-extender": "^1.1",
         "pantheon-systems/drupal-integrations": "^8",
         "pantheon-systems/quicksilver-pushback": "^2",
         "rvtraveller/qs-composer-installer": "^1.1",
@@ -113,6 +156,12 @@
         "sort-packages": true,
         "platform": {
             "php": "7.0.8"
+        },
+      "foxy": {
+        "installer-paths": {
+          "npm-asset-library": "web/libraries",
+          "bower-asset-library": "web/libraries"
         }
+      }
     }
 }

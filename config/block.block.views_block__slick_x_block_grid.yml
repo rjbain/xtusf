@@ -1,0 +1,35 @@
+uuid: 7317e345-565c-466b-b46b-ea6a1005296d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - system
+  theme:
+    - bartik
+id: views_block__slick_x_block_grid
+theme: bartik
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:slick_x-block_grid'
+settings:
+  id: 'views_block:slick_x-block_grid'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      article: article
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: /node/1
+    negate: false
+    context_mapping: {  }

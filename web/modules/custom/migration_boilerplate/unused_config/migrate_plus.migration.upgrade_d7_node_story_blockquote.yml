@@ -1,0 +1,96 @@
+uuid: 8666df2e-98b5-44e8-9c5c-5b278b3588a5
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_story_blockquote
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: alterFieldInstanceMigration
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Nodes (Story Blockquote)'
+source:
+  plugin: d7_node
+  node_type: story_blockquote
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: changed
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  comment_node_story_blockquote/0/status:
+    -
+      plugin: get
+      source: comment
+  field_panel_color_select:
+    -
+      plugin: get
+      source: field_panel_color_select
+  field_quote_source:
+    -
+      plugin: get
+      source: field_quote_source
+  field_quote_text:
+    -
+      plugin: get
+      source: field_quote_text
+destination:
+  plugin: 'entity:node'
+  default_bundle: story_blockquote
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+  optional:
+    - upgrade_d7_field_instance
+    - upgrade_d7_comment_field_instance

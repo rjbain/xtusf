@@ -1,0 +1,22 @@
+uuid: 47fa3ae4-1f03-45da-821b-d00d9a648154
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - slick_example
+_core:
+  default_config_hash: wgOVZyfs5OVqpR9hhaVKhkoUSPU3mxGeyjDy2YDUaso
+id: x_grid
+name: x_grid
+label: 'X Grid'
+weight: -5
+group: main
+skin: grid
+breakpoints: 0
+optimized: true
+options:
+  settings:
+    dots: true
+    lazyLoad: ondemand
+    slidesToShow: 1

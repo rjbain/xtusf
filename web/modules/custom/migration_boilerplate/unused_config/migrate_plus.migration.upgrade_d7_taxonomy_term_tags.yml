@@ -1,0 +1,184 @@
+uuid: 3dcf46b5-7c99-437b-ac3b-104743caafd2
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_taxonomy_term_tags
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: alterFieldFormatterMigration
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Taxonomy terms (Tags)'
+source:
+  plugin: d7_taxonomy_term
+  bundle: tags
+process:
+  tid:
+    -
+      plugin: get
+      source: tid
+  vid:
+    -
+      plugin: migration_lookup
+      migration: upgrade_d7_taxonomy_vocabulary
+      source: vid
+  name:
+    -
+      plugin: get
+      source: name
+  description/value:
+    -
+      plugin: get
+      source: description
+  description/format:
+    -
+      plugin: get
+      source: format
+  weight:
+    -
+      plugin: get
+      source: weight
+  parent_id:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: parent
+    -
+      plugin: migration_lookup
+      migration:
+        - upgrade_d7_taxonomy_term_external_news_source
+        - upgrade_d7_taxonomy_term_external_news_target_audiences
+        - upgrade_d7_taxonomy_term_faculty_departments
+        - upgrade_d7_taxonomy_term_academic_calendar_type
+        - upgrade_d7_taxonomy_term_academic_calendar_terms
+        - upgrade_d7_taxonomy_term_usf_blog
+        - upgrade_d7_taxonomy_term_program_director
+        - upgrade_d7_taxonomy_term_admission_recruiting_type
+        - upgrade_d7_taxonomy_term_news_target
+        - upgrade_d7_taxonomy_term_hobsons_state_or_province_list
+        - upgrade_d7_taxonomy_term_magazine_issue
+        - upgrade_d7_taxonomy_term_hobsons_program_list
+        - upgrade_d7_taxonomy_term_event_target_audience
+        - upgrade_d7_taxonomy_term_scoop_it_category
+        - upgrade_d7_taxonomy_term_event_group_name
+        - upgrade_d7_taxonomy_term_journal_story_type
+        - upgrade_d7_taxonomy_term_journal_name
+        - upgrade_d7_taxonomy_term_journal_issue
+        - upgrade_d7_taxonomy_term_event_group
+        - upgrade_d7_taxonomy_term_event_building
+        - upgrade_d7_taxonomy_term_event_category
+        - upgrade_d7_taxonomy_term_news_category
+        - upgrade_d7_taxonomy_term_programs
+        - upgrade_d7_taxonomy_term_media_type
+        - upgrade_d7_taxonomy_term_campus_locations
+        - upgrade_d7_taxonomy_term_profile_category
+        - upgrade_d7_taxonomy_term_news_terms
+        - upgrade_d7_taxonomy_term_event_terms
+        - upgrade_d7_taxonomy_term_media_folders
+        - upgrade_d7_taxonomy_term_school
+        - upgrade_d7_taxonomy_term_department
+        - upgrade_d7_taxonomy_term_content_access_control
+        - upgrade_d7_taxonomy_term_academic_program_type
+        - upgrade_d7_taxonomy_term_academic_degree_type
+        - upgrade_d7_taxonomy_term_import_category
+        - upgrade_d7_taxonomy_term_tags
+  parent:
+    -
+      plugin: default_value
+      default_value: 0
+      source: '@parent_id'
+  forum_container:
+    -
+      plugin: get
+      source: is_container
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  langcode:
+    -
+      plugin: get
+      source: language
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: tags
+migration_dependencies:
+  required:
+    - upgrade_d7_taxonomy_vocabulary
+  optional:
+    - upgrade_d7_field_instance
+    - upgrade_d7_taxonomy_vocabulary
+    - upgrade_d7_taxonomy_term_tags
+    - upgrade_d7_taxonomy_term_import_category
+    - upgrade_d7_taxonomy_term_academic_degree_type
+    - upgrade_d7_taxonomy_term_academic_program_type
+    - upgrade_d7_taxonomy_term_content_access_control
+    - upgrade_d7_taxonomy_term_department
+    - upgrade_d7_taxonomy_term_school
+    - upgrade_d7_taxonomy_term_media_folders
+    - upgrade_d7_taxonomy_term_event_terms
+    - upgrade_d7_taxonomy_term_news_terms
+    - upgrade_d7_taxonomy_term_profile_category
+    - upgrade_d7_taxonomy_term_campus_locations
+    - upgrade_d7_taxonomy_term_media_type
+    - upgrade_d7_taxonomy_term_programs
+    - upgrade_d7_taxonomy_term_news_category
+    - upgrade_d7_taxonomy_term_event_category
+    - upgrade_d7_taxonomy_term_event_building
+    - upgrade_d7_taxonomy_term_event_group
+    - upgrade_d7_taxonomy_term_journal_issue
+    - upgrade_d7_taxonomy_term_journal_name
+    - upgrade_d7_taxonomy_term_journal_story_type
+    - upgrade_d7_taxonomy_term_event_group_name
+    - upgrade_d7_taxonomy_term_scoop_it_category
+    - upgrade_d7_taxonomy_term_event_target_audience
+    - upgrade_d7_taxonomy_term_hobsons_program_list
+    - upgrade_d7_taxonomy_term_magazine_issue
+    - upgrade_d7_taxonomy_term_hobsons_state_or_province_list
+    - upgrade_d7_taxonomy_term_news_target
+    - upgrade_d7_taxonomy_term_admission_recruiting_type
+    - upgrade_d7_taxonomy_term_program_director
+    - upgrade_d7_taxonomy_term_usf_blog
+    - upgrade_d7_taxonomy_term_academic_calendar_terms
+    - upgrade_d7_taxonomy_term_academic_calendar_type
+    - upgrade_d7_taxonomy_term_faculty_departments
+    - upgrade_d7_taxonomy_term_external_news_target_audiences
+    - upgrade_d7_taxonomy_term_external_news_source
+    - upgrade_d7_taxonomy_term_external_news_source
+    - upgrade_d7_taxonomy_term_external_news_target_audiences
+    - upgrade_d7_taxonomy_term_faculty_departments
+    - upgrade_d7_taxonomy_term_academic_calendar_type
+    - upgrade_d7_taxonomy_term_academic_calendar_terms
+    - upgrade_d7_taxonomy_term_usf_blog
+    - upgrade_d7_taxonomy_term_program_director
+    - upgrade_d7_taxonomy_term_admission_recruiting_type
+    - upgrade_d7_taxonomy_term_news_target
+    - upgrade_d7_taxonomy_term_hobsons_state_or_province_list
+    - upgrade_d7_taxonomy_term_magazine_issue
+    - upgrade_d7_taxonomy_term_hobsons_program_list
+    - upgrade_d7_taxonomy_term_event_target_audience
+    - upgrade_d7_taxonomy_term_scoop_it_category
+    - upgrade_d7_taxonomy_term_event_group_name
+    - upgrade_d7_taxonomy_term_journal_story_type
+    - upgrade_d7_taxonomy_term_journal_name
+    - upgrade_d7_taxonomy_term_journal_issue
+    - upgrade_d7_taxonomy_term_event_group
+    - upgrade_d7_taxonomy_term_event_building
+    - upgrade_d7_taxonomy_term_event_category
+    - upgrade_d7_taxonomy_term_news_category
+    - upgrade_d7_taxonomy_term_programs
+    - upgrade_d7_taxonomy_term_media_type
+    - upgrade_d7_taxonomy_term_campus_locations
+    - upgrade_d7_taxonomy_term_profile_category
+    - upgrade_d7_taxonomy_term_news_terms
+    - upgrade_d7_taxonomy_term_event_terms
+    - upgrade_d7_taxonomy_term_media_folders
+    - upgrade_d7_taxonomy_term_school
+    - upgrade_d7_taxonomy_term_department
+    - upgrade_d7_taxonomy_term_content_access_control
+    - upgrade_d7_taxonomy_term_academic_program_type
+    - upgrade_d7_taxonomy_term_academic_degree_type
+    - upgrade_d7_taxonomy_term_import_category
+    - upgrade_d7_taxonomy_term_tags

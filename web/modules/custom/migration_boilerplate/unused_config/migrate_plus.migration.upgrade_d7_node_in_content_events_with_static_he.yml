@@ -1,0 +1,146 @@
+uuid: 96ab43b5-a584-49a6-9054-3d4665e3042a
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_in_content_events_with_static_he
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: alterFieldInstanceMigration
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Nodes (In Content Events)'
+source:
+  plugin: d7_node
+  node_type: in_content_events_with_static_he
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: changed
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  comment_node_in_content_events_with_static_he/0/status:
+    -
+      plugin: get
+      source: comment
+  field_bold_text_area:
+    -
+      plugin: get
+      source: field_bold_text_area
+  field_event_terms:
+    -
+      plugin: sub_process
+      source: field_event_terms
+      process:
+        target_id: tid
+  field_light_text_area:
+    -
+      plugin: get
+      source: field_light_text_area
+  field_static_content_reference:
+    -
+      plugin: get
+      source: field_static_content_reference
+  field_static_date_box:
+    -
+      plugin: sub_process
+      source: field_static_date_box
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: Y-m-d
+          source: value
+  field_static_event_image:
+    -
+      plugin: sub_process
+      source: field_static_event_image
+      process:
+        target_id: fid
+        alt: alt
+        title: title
+        width: width
+        height: height
+  field_static_event_sub_title:
+    -
+      plugin: get
+      source: field_static_event_sub_title
+  field_static_event_title:
+    -
+      plugin: get
+      source: field_static_event_title
+  field_content_single_ref_uri:
+    -
+      plugin: field_link
+      source: field_content_single_ref_uri
+  field_display_as:
+    -
+      plugin: get
+      source: field_display_as
+  field_list_size:
+    -
+      plugin: get
+      source: field_list_size
+  field_panel_color_select:
+    -
+      plugin: get
+      source: field_panel_color_select
+destination:
+  plugin: 'entity:node'
+  default_bundle: in_content_events_with_static_he
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+  optional:
+    - upgrade_d7_field_instance
+    - upgrade_d7_comment_field_instance
