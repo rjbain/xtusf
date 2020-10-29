@@ -23,22 +23,6 @@
                     "reference": "1.8.2"
                 }
             }
-        },
-        {
-          "type": "package",
-          "package": {
-            "name": "kenwheeler/slick",
-            "version": "1.8.0",
-            "type": "drupal-library",
-            "extra": {
-              "installer-name": "slick"
-            },
-            "source": {
-              "type": "git",
-              "url": "https://github.com/kenwheeler/slick",
-              "reference": "1.8.0"
-            }
-          }
         }
     ],
     "require": {
@@ -56,7 +40,6 @@
         "drupal/migrate_plus": "^4.2",
         "drupal/migrate_tools": "^4.5",
         "drupal/migrate_upgrade": "~3.0.0",
-        "drupal/slick": "^2.2",
         "drupal/slick_extras": "1.0-rc3",
         "drupal/slick_views": "^2.3",
         "drush-ops/behat-drush-endpoint": "^9.3",
