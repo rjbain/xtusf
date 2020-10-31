@@ -35,7 +35,7 @@
         "drupal/config_installer": "^1.0",
         "drupal/console": "^1.9",
         "drupal/core-composer-scaffold": "^8.8.1",
-        "drupal/core-recommended": "^8.8",
+        "drupal/gin": "^3.0@alpha",
         "drupal/libraries": "^3.0@alpha",
         "drupal/migrate_plus": "^4.2",
         "drupal/migrate_tools": "^4.5",
@@ -71,7 +71,7 @@
     "conflict": {
             "drupal/drupal": "*"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "alpha",
     "prefer-stable": true,
     "autoload": {
         "classmap": [
