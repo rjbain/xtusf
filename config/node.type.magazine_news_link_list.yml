@@ -1,0 +1,16 @@
+uuid: a85ad7f6-463d-41d1-8bba-8e53ce1e6321
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    parent: 'main-menu:0:'
+name: 'Magazine News Link List'
+type: magazine_news_link_list
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

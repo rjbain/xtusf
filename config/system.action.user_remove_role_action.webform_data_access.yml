@@ -1,0 +1,14 @@
+uuid: ef822e96-954f-417b-a9aa-7f745643d251
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.webform_data_access
+  module:
+    - user
+id: user_remove_role_action.webform_data_access
+label: 'Remove the Webform Data Access role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: webform_data_access

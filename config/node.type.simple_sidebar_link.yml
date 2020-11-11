@@ -1,0 +1,16 @@
+uuid: 2c6fd545-28bd-486b-96b4-6276b7d8624a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    parent: 'main-menu:0:'
+name: 'Simple Sidebar Link'
+type: simple_sidebar_link
+description: 'Simple Sidebar Link for displaying a short phrase with an icon that links to a fully qualified URL.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,18 @@
+uuid: 8fb8e596-f839-45dd-8268-fec390216c31
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main-menu
+    parent: 'main-menu:0:'
+name: 'Gleeson Gleanings'
+type: gleeson_gleanings
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

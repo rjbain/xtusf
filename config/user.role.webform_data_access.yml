@@ -1,0 +1,14 @@
+uuid: 7dd97b5b-3339-48f4-8892-917c24dd2127
+langcode: en
+status: true
+dependencies: {  }
+id: webform_data_access
+label: 'Webform Data Access'
+weight: 10
+is_admin: null
+permissions:
+  - 'access admin theme'
+  - 'access administration menu'
+  - 'access all webform results'
+  - 'access content overview'
+  - 'view the administration theme'

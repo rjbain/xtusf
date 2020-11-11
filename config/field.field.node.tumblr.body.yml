@@ -1,0 +1,23 @@
+uuid: 6a462c9b-cc57-4e18-be29-c3a58e201830
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.tumblr
+  module:
+    - text
+id: node.tumblr.body
+field_name: body
+entity_type: node
+bundle: tumblr
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

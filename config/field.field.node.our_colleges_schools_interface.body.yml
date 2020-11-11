@@ -1,0 +1,23 @@
+uuid: 6c5b8b7c-8f9e-4d09-9b2a-90349b945e4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.our_colleges_schools_interface
+  module:
+    - text
+id: node.our_colleges_schools_interface.body
+field_name: body
+entity_type: node
+bundle: our_colleges_schools_interface
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

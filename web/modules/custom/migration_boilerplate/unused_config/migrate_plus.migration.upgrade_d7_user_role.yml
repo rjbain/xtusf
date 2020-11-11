@@ -13,6 +13,7 @@ migration_group: users
 label: 'User roles'
 source:
   plugin: d7_user_role
+  batch_size: 1000
 process:
   id:
     -

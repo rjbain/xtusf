@@ -14,6 +14,7 @@ label: 'Nodes (Academic Program)'
 source:
   plugin: d7_node
   node_type: academic_program
+  batch_size: 1000
 process:
   nid:
     -

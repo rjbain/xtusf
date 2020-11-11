@@ -1,0 +1,18 @@
+uuid: 04b34ef5-be0d-4347-8509-d6ccf0597b83
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main-menu
+    parent: 'main-menu:0:'
+name: 'External News: USF In The News'
+type: external_news_usf_in_the_news
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

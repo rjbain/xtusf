@@ -1,0 +1,14 @@
+uuid: 001cb775-1a07-468a-90b0-badfc91402a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.super_site_administrator
+  module:
+    - user
+id: user_remove_role_action.super_site_administrator
+label: 'Remove the Super Site Administrator role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: super_site_administrator

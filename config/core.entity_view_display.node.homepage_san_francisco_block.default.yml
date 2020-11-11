@@ -1,0 +1,28 @@
+uuid: 398bbafe-763c-4a38-96db-75741ea38ece
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.homepage_san_francisco_block.body
+    - node.type.homepage_san_francisco_block
+  module:
+    - text
+    - user
+id: node.homepage_san_francisco_block.default
+targetEntityType: node
+bundle: homepage_san_francisco_block
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

@@ -1,0 +1,23 @@
+uuid: feeb3e13-c4c2-44ad-baa0-4704176da4dc
+langcode: en
+status: true
+dependencies: {  }
+id: d7_field_collection_type
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+migration_group: field_prep
+label: 'Paragraphs - Field Collection type configuration'
+source:
+  plugin: d7_field_collection_type
+  add_description: true
+process:
+  id: bundle
+  label: name
+  description: description
+destination:
+  plugin: 'entity:paragraphs_type'
+migration_dependencies: null

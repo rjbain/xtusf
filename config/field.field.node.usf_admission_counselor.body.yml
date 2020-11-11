@@ -1,0 +1,23 @@
+uuid: aa74cdc3-823e-45d5-9cfb-1887a2ef9663
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.usf_admission_counselor
+  module:
+    - text
+id: node.usf_admission_counselor.body
+field_name: body
+entity_type: node
+bundle: usf_admission_counselor
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

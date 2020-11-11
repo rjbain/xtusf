@@ -1,0 +1,16 @@
+uuid: fe985e8a-c2ff-4a4c-b59f-cbc15975ce26
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    parent: 'main-menu:0:'
+name: 'Advantage Image Box'
+type: advantage_image_box
+description: "For use only on the HOMEPAGE SF MEDIA GRID Content Type, as a referenced node.\r\nThis Content Type allows to populate an image, and optional caption for use in the \"Homepage SF Advantage Media Interface\"."
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

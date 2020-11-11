@@ -1,0 +1,30 @@
+uuid: a5a4c9eb-1ad3-4217-abb2-ca65b52dfe03
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.crase_blog.body
+    - node.type.crase_blog
+  module:
+    - text
+    - user
+id: node.crase_blog.teaser
+targetEntityType: node
+bundle: crase_blog
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

@@ -1,0 +1,28 @@
+uuid: 172dc5fc-3856-4391-8d4a-bdeb54e48ae2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.law_media.body
+    - node.type.law_media
+  module:
+    - text
+    - user
+id: node.law_media.default
+targetEntityType: node
+bundle: law_media
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

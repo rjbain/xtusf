@@ -1,0 +1,30 @@
+uuid: 028babb1-8205-483e-952b-c0d462c44adb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.publications_and_media.body
+    - node.type.publications_and_media
+  module:
+    - text
+    - user
+id: node.publications_and_media.teaser
+targetEntityType: node
+bundle: publications_and_media
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

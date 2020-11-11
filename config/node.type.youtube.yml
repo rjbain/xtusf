@@ -1,0 +1,16 @@
+uuid: 6ad44a98-8a8a-471f-80df-4318610d5390
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    parent: 'main-menu:0:'
+name: 'Youtube video'
+type: youtube
+description: 'A thumbnail of the Youtube video.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

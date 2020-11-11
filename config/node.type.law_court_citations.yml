@@ -1,0 +1,16 @@
+uuid: c9b85378-4f99-4693-b366-d4f0b459d329
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    parent: 'main-menu:0:'
+name: 'Law Court Citations'
+type: law_court_citations
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

@@ -13,6 +13,7 @@ migration_group: users
 label: 'User accounts'
 source:
   plugin: d7_user
+  batch_size: 1000
 process:
   uid:
     -

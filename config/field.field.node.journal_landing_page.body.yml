@@ -1,0 +1,23 @@
+uuid: 20502ef1-26ce-4c7f-8406-6623f18d8f6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.journal_landing_page
+  module:
+    - text
+id: node.journal_landing_page.body
+field_name: body
+entity_type: node
+bundle: journal_landing_page
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

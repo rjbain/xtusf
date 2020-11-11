@@ -1,0 +1,23 @@
+uuid: e03a4afe-f0e5-4cad-bb9e-e59d40fa51d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.campaign_thermometer
+  module:
+    - text
+id: node.campaign_thermometer.body
+field_name: body
+entity_type: node
+bundle: campaign_thermometer
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

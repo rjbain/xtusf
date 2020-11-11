@@ -29,6 +29,7 @@ source:
     - user_mail_status_blocked_subject
     - user_mail_status_blocked_body
   source_module: user
+  batch_size: 1000
 process:
   status_activated/subject:
     -

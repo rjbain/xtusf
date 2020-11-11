@@ -20,6 +20,7 @@ source:
     - user_failed_login_user_window
     - user_failed_login_user_limit
   source_module: user
+  batch_size: 1000
 process:
   uid_only:
     -

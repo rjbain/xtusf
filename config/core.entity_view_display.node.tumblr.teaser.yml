@@ -1,0 +1,30 @@
+uuid: 88bca0e6-fff5-4426-a610-4fde24b2c10b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.tumblr.body
+    - node.type.tumblr
+  module:
+    - text
+    - user
+id: node.tumblr.teaser
+targetEntityType: node
+bundle: tumblr
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

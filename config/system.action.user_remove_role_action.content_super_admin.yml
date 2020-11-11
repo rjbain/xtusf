@@ -1,0 +1,14 @@
+uuid: 2a4eb6e6-3d38-499b-a736-ba65a9ea4285
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.content_super_admin
+  module:
+    - user
+id: user_remove_role_action.content_super_admin
+label: 'Remove the Content Super Admin role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: content_super_admin

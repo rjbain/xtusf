@@ -1,0 +1,16 @@
+uuid: a59d5fd2-ab15-4da9-bce4-739e71a7cbf3
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    parent: 'main-menu:0:'
+name: 'Magazine Story Blockquote'
+type: magazine_story_blockquote
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false
