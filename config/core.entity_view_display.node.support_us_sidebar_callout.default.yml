@@ -1,0 +1,28 @@
+uuid: 723d7e68-8301-4fd4-860b-6114a30efba1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.support_us_sidebar_callout.body
+    - node.type.support_us_sidebar_callout
+  module:
+    - text
+    - user
+id: node.support_us_sidebar_callout.default
+targetEntityType: node
+bundle: support_us_sidebar_callout
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

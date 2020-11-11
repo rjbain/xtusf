@@ -1,0 +1,30 @@
+uuid: b23342a2-d0c9-47f2-bfa1-03604c7c994e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.admissions_featured_links.body
+    - node.type.admissions_featured_links
+  module:
+    - text
+    - user
+id: node.admissions_featured_links.teaser
+targetEntityType: node
+bundle: admissions_featured_links
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

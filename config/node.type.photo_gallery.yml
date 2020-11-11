@@ -1,0 +1,18 @@
+uuid: 9966ec52-210f-4f14-ba02-d289a18a2cb1
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main-menu
+    parent: 'main-menu:0:'
+name: 'Photo Gallery'
+type: photo_gallery
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,28 @@
+uuid: 18a8f553-43c3-4dc5-8350-fd7bf0af97d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.usf_blog.body
+    - node.type.usf_blog
+  module:
+    - text
+    - user
+id: node.usf_blog.default
+targetEntityType: node
+bundle: usf_blog
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

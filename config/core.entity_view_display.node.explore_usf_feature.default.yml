@@ -1,0 +1,28 @@
+uuid: 4c530320-3f01-4a4e-8458-be120e4863e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.explore_usf_feature.body
+    - node.type.explore_usf_feature
+  module:
+    - text
+    - user
+id: node.explore_usf_feature.default
+targetEntityType: node
+bundle: explore_usf_feature
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

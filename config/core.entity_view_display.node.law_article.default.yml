@@ -1,0 +1,28 @@
+uuid: ea60a2eb-40f4-42aa-b3c7-9f8b665005eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.law_article.body
+    - node.type.law_article
+  module:
+    - text
+    - user
+id: node.law_article.default
+targetEntityType: node
+bundle: law_article
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

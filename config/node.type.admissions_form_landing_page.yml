@@ -1,0 +1,18 @@
+uuid: c3193843-5622-4fab-b2fd-992120109433
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main-menu
+    parent: 'main-menu:0:'
+name: 'Admissions Form Landing Page'
+type: admissions_form_landing_page
+description: 'A landing page that will hold some text as well as a form to contact admissions.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

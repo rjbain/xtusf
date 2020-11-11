@@ -1,0 +1,30 @@
+uuid: 059000ee-e637-4509-99f1-2012766f9c0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.usf_admission_recruiting_events.body
+    - node.type.usf_admission_recruiting_events
+  module:
+    - text
+    - user
+id: node.usf_admission_recruiting_events.teaser
+targetEntityType: node
+bundle: usf_admission_recruiting_events
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

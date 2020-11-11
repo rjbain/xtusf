@@ -1,0 +1,30 @@
+uuid: b597498e-4ca5-404b-88d9-4c13705e4337
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.usf_admission_counselor.body
+    - node.type.usf_admission_counselor
+  module:
+    - text
+    - user
+id: node.usf_admission_counselor.teaser
+targetEntityType: node
+bundle: usf_admission_counselor
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

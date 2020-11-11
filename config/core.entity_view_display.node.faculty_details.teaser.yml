@@ -1,0 +1,30 @@
+uuid: 1bc90194-9e3a-4f16-8924-1e1f91e8ce4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.faculty_details.body
+    - node.type.faculty_details
+  module:
+    - text
+    - user
+id: node.faculty_details.teaser
+targetEntityType: node
+bundle: faculty_details
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

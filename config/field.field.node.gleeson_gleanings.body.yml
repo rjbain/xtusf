@@ -1,0 +1,23 @@
+uuid: 916dffd6-f5d2-49b2-b06f-159eb287f9ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.gleeson_gleanings
+  module:
+    - text
+id: node.gleeson_gleanings.body
+field_name: body
+entity_type: node
+bundle: gleeson_gleanings
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,23 @@
+uuid: 1869911a-b8c2-4f5d-8b3b-838083682492
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.law_court_citations
+  module:
+    - text
+id: node.law_court_citations.body
+field_name: body
+entity_type: node
+bundle: law_court_citations
+label: Teaser
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

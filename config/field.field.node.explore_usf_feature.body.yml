@@ -1,0 +1,23 @@
+uuid: 046633cc-3a17-493a-9dc5-a2dd51a9c05e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.explore_usf_feature
+  module:
+    - text
+id: node.explore_usf_feature.body
+field_name: body
+entity_type: node
+bundle: explore_usf_feature
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

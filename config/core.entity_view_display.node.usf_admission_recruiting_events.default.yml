@@ -1,0 +1,28 @@
+uuid: 74745003-3ffa-4061-989a-737358f44ad4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.usf_admission_recruiting_events.body
+    - node.type.usf_admission_recruiting_events
+  module:
+    - text
+    - user
+id: node.usf_admission_recruiting_events.default
+targetEntityType: node
+bundle: usf_admission_recruiting_events
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

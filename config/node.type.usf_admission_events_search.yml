@@ -1,0 +1,16 @@
+uuid: 333d3d5d-e6fe-4ed4-8a52-5fb91bf6b7f2
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    parent: 'main-menu:0:'
+name: 'USF Admission Events Search'
+type: usf_admission_events_search
+description: 'A search widget that can be dropped onto a page for Admission events'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

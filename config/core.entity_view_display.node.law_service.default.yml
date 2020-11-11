@@ -1,0 +1,28 @@
+uuid: a604f73c-2a6f-4ddd-91bc-6bd005234089
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.law_service.body
+    - node.type.law_service
+  module:
+    - text
+    - user
+id: node.law_service.default
+targetEntityType: node
+bundle: law_service
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

@@ -1,0 +1,28 @@
+uuid: d7b6b475-fcb2-4827-ae64-fe020b2e512a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.journal_story.body
+    - node.type.journal_story
+  module:
+    - text
+    - user
+id: node.journal_story.default
+targetEntityType: node
+bundle: journal_story
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

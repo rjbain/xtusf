@@ -1,0 +1,28 @@
+uuid: e990675f-132c-4a71-87c3-9d3a3c376f06
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.campaign_thermometer.body
+    - node.type.campaign_thermometer
+  module:
+    - text
+    - user
+id: node.campaign_thermometer.default
+targetEntityType: node
+bundle: campaign_thermometer
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

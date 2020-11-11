@@ -1,0 +1,30 @@
+uuid: eab9dbf5-c0e2-4789-a01c-15d1f827c672
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.support_us_sidebar_callout.body
+    - node.type.support_us_sidebar_callout
+  module:
+    - text
+    - user
+id: node.support_us_sidebar_callout.teaser
+targetEntityType: node
+bundle: support_us_sidebar_callout
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

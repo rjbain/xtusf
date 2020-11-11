@@ -1,0 +1,16 @@
+uuid: 0011d075-db75-427b-af01-5ec2d346178c
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    parent: 'main-menu:0:'
+name: 'Magazine Story Block List'
+type: magazine_story_block_list
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

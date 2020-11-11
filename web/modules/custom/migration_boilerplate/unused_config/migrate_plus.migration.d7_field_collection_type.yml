@@ -1,0 +1,16 @@
+id: d7_field_collection_type
+label: Paragraphs - Field Collection type configuration
+migration_tags:
+  - Drupal 7
+  - Configuration
+migration_group: field_prep
+source:
+  plugin: d7_field_collection_type
+  add_description: true
+  batch_size: 1000
+process:
+  id: bundle
+  label: name
+  description: description
+destination:
+  plugin: 'entity:paragraphs_type'

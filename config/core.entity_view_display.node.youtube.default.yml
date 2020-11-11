@@ -1,0 +1,28 @@
+uuid: 438bcc8e-5de8-4fb7-8e51-83659eee2c61
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.youtube.body
+    - node.type.youtube
+  module:
+    - text
+    - user
+id: node.youtube.default
+targetEntityType: node
+bundle: youtube
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

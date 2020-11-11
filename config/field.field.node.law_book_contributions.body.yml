@@ -1,0 +1,23 @@
+uuid: 67709aa4-d622-4951-a374-1ed3f8a27f2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.law_book_contributions
+  module:
+    - text
+id: node.law_book_contributions.body
+field_name: body
+entity_type: node
+bundle: law_book_contributions
+label: Teaser
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,14 @@
+uuid: 279b05ed-d3df-42e1-a4f6-97a18444147a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.super_site_administrator
+  module:
+    - user
+id: user_add_role_action.super_site_administrator
+label: 'Add the Super Site Administrator role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: super_site_administrator

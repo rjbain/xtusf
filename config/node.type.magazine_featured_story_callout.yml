@@ -1,0 +1,16 @@
+uuid: 997120bd-aabd-4417-bd57-82e35c763e5f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    parent: 'main-menu:0:'
+name: 'Magazine Featured Story Callout'
+type: magazine_featured_story_callout
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

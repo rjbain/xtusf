@@ -1,0 +1,30 @@
+uuid: b14f8046-f6aa-40df-9090-b19152da3645
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.full_width_button_intro.body
+    - node.type.full_width_button_intro
+  module:
+    - text
+    - user
+id: node.full_width_button_intro.teaser
+targetEntityType: node
+bundle: full_width_button_intro
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

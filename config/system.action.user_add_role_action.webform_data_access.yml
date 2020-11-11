@@ -1,0 +1,14 @@
+uuid: c86b9182-8f07-48b4-b715-1e9c57759a52
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.webform_data_access
+  module:
+    - user
+id: user_add_role_action.webform_data_access
+label: 'Add the Webform Data Access role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: webform_data_access

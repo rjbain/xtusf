@@ -1,0 +1,30 @@
+uuid: bdd8af75-7806-496f-bb7f-f9ce3811a0ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.law_presentations.body
+    - node.type.law_presentations
+  module:
+    - text
+    - user
+id: node.law_presentations.teaser
+targetEntityType: node
+bundle: law_presentations
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

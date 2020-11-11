@@ -1,0 +1,28 @@
+uuid: 2cfb909c-8c42-495f-b273-468bc4c434c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.vimeo.body
+    - node.type.vimeo
+  module:
+    - text
+    - user
+id: node.vimeo.default
+targetEntityType: node
+bundle: vimeo
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }
