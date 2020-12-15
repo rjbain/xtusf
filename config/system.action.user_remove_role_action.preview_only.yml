@@ -1,0 +1,14 @@
+uuid: 1acc142e-1f1a-4afe-9cd9-1bd85a33f658
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.preview_only
+  module:
+    - user
+id: user_remove_role_action.preview_only
+label: 'Remove the Preview Only role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: preview_only
