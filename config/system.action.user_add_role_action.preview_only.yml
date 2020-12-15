@@ -1,0 +1,14 @@
+uuid: 4c6827d5-b063-451a-b1cb-6480602386ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.preview_only
+  module:
+    - user
+id: user_add_role_action.preview_only
+label: 'Add the Preview Only role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: preview_only

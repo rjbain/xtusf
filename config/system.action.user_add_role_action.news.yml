@@ -1,0 +1,14 @@
+uuid: 9eebe6c7-3cec-4612-bc0d-ff4ef21ae5e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.news
+  module:
+    - user
+id: user_add_role_action.news
+label: 'Add the News role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: news

@@ -1,0 +1,9 @@
+uuid: 0392c4bf-3506-4d76-8eb0-d4bc17fa59ae
+langcode: en
+status: true
+dependencies: {  }
+id: preview_only
+label: 'Preview Only'
+weight: 3
+is_admin: null
+permissions: {  }

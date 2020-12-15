@@ -3,16 +3,16 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_display.comment.comment.default
     - field.field.node.article.body
     - field.field.node.article.comment
     - field.field.node.article.field_image
-    - field.field.node.article.field_images
     - field.field.node.article.field_tags
     - image.style.large
     - node.type.article
   module:
-    - blazy
-    - slick
+    - comment
+    - image
     - text
     - user
 _core:
@@ -29,106 +29,35 @@ content:
     settings: {  }
     third_party_settings: {  }
     label: hidden
+  comment:
+    type: comment_default
+    weight: 110
+    region: content
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
   field_image:
-    type: blazy
-    weight: 3
+    type: image
+    weight: -1
     region: content
     settings:
       image_style: large
-      icon: ''
-      layout: ''
-      view_mode: ''
-      cache: 0
-      current_view_mode: ''
-      skin: ''
-      fx: ''
-      style: ''
-      background: false
-      box_caption: ''
-      box_caption_custom: ''
-      box_media_style: ''
-      caption: {  }
-      responsive_image_style: ''
-      box_style: ''
-      media_switch: ''
-      ratio: ''
-      thumbnail_style: ''
-      _uri: ''
-      breakpoints: {  }
-      sizes: ''
-      grid_header: ''
-      grid: 0
-      grid_medium: 0
-      grid_small: 0
+      image_link: ''
     third_party_settings: {  }
     label: hidden
-  field_images:
-    weight: 4
-    label: hidden
-    settings:
-      style: ''
-      optionset: default
-      optionset_thumbnail: ''
-      skin: grid
-      skin_thumbnail: ''
-      image_style: ''
-      thumbnail_effect: ''
-      thumbnail_position: ''
-      media_switch: ''
-      thumbnail_style: ''
-      ratio: ''
-      grid: null
-      grid_medium: null
-      grid_small: null
-      visible_items: null
-      layout: ''
-      thumbnail_caption: ''
-      cache: 0
-      current_view_mode: default
-      background: false
-      caption:
-        title: '0'
-        alt: '0'
-      preserve_keys: false
-      override: false
-      overridables:
-        arrows: '0'
-        autoplay: '0'
-        dots: '0'
-        draggable: '0'
-        infinite: '0'
-        mouseWheel: '0'
-        randomize: '0'
-        variableWidth: '0'
-      skin_arrows: ''
-      skin_dots: ''
-      fx: ''
-      icon: ''
-      view_mode: ''
-      box_caption: ''
-      box_caption_custom: ''
-      box_media_style: ''
-      responsive_image_style: ''
-      box_style: ''
-      _uri: ''
-      breakpoints: {  }
-      sizes: ''
-      grid_header: ''
-    third_party_settings: {  }
-    type: slick_image
-    region: content
   field_tags:
     type: entity_reference_label
-    weight: 1
+    weight: 10
     region: content
-    label: hidden
+    label: above
     settings:
       link: true
     third_party_settings: {  }
   links:
-    weight: 2
+    weight: 100
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden:
-  comment: true
+hidden: {  }
